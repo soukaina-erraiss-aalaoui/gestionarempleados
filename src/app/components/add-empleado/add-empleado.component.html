@@ -1,0 +1,31 @@
+<div class="container mt-4">
+    <h2>Add New Empleado</h2>
+    <form (ngSubmit)="addEmpleado()" #empleadoForm="ngForm">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          id="name"
+          class="form-control"
+          [(ngModel)]="empleado.name"
+          name="name"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="designation" class="form-label">Designation</label>
+        <input
+          type="text"
+          id="designation"
+          class="form-control"
+          [(ngModel)]="empleado.designation"
+          name="designation"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!empleadoForm.valid">
+        Add Empleado
+      </button>
+    </form>
+  </div>
+  
